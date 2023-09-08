@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Barberia Alura</title>
+    
+    <link rel="stylesheet" href="reset.css"><!--arquivo que exclui toda a formatação padrão do CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!--cabeçalho-->
+        <div class="caixa">
+            <h1><img src="logo.png" alt="Logo Barbearia Alura"></h1> <!--minha logo é a principal-->
+            <nav><!--tag especial para menu de navegação-->
+                <ul> <!--lista de opções-->
+                    <li><a href="index.html">Home</a></li> <!--criando um link-->
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <form> <!--tag para formulário-->
+            <label for="nomesobrenome">Nome e sobrenome</label><!--etiqueta para input. Esse par sempre anda junto. Eu tenho um label e tenho um input. Eu tenho uma informação sobre para que serve aquela entrada de dados e efetivamente a entrada de dados.-->
+            <input type="text" id="nomesobrenome" class="input-padrao" required> <!--entrada de dados; Toda vez que eu tenho um input, eu boto um identificador nele. Um input geralmente é único, eu vou ter uma entrada do nome e sobrenome do usuário. E no identificador, eu coloco qualquer conteúdo-->
+
+            <label for="email">Email</label> <!--email-->
+            <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!--required = obrigatorio e placeholder deixa o campo com uma sugestão de preenchimento-->
+
+            <label for="telefone">Telefone</label> <!--telefone-->
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label> <!--mensagem-->
+            <textarea id="mensagem" cols="70" rows="10" class="input-padrao" required></textarea> 
+
+            <fieldset>
+                <legend>Como prefere o nosso contato?</legend>
+                <label for="radio-email"><input type="radio" name="contato" id="radio-email" value="email">Email</label> <!--escolha email; name serve para que sejam do msm grupo e só poder marcar uma opção-->
+
+                <label for="radio-telefone"><input type="radio" name="contato" id="radio-telefone" value="telefone"> Telefone</label><!--escolha telefone-->
+               
+                <label for="radio-whatsapp"><input type="radio" name="contato" id="radio-whatsapp" value="telefone" checked>WhatsApp</label> <!--escolha whatsapp; checked = marcado-->
+            </fieldset>
+
+            <fieldset> <!--quando temos um campo e um texto, ou vários campos referentes a alguma coisa, como dados de um cartão.-->
+                <legend>Qual horário prefere ser atendido?</legend> <!--titulo de um fieldset-->
+                <select> <!--um campo do tipo select tem dentro dele várias opções, as opções são campos de conteúdo, e vou colocar os valores:-->
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades pelo email?</label> <!--atalho para acelerar o processo-->
+
+            <input type="submit" value="Enviar formulário" class="enviar"> <!--submit = enviar-->
+        </form>
+
+        <table> <!--tabela-->
+            <thead>
+                <tr> <!--linha-->
+                    <th>Dia</th> <!--cabeçalho-->
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda</td> <!--coluna-->
+                    <td>8h ~ 20</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer> <!--rodapé-->
+        <img src="logo-branco.png" alt="Logo Barbearia Alura">
+        <p class="copyright">&copy; copyright Barbearia Alura - 2019</p>
+    </footer>
+</body>
+</html>
